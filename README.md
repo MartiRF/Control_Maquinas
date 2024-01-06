@@ -11,3 +11,7 @@ Projecto para llevar control de equipo(laptop,impresoras,toners,etc). Registro t
 - Estad(Entregada,Pendiente,Bodega)
 - Precio
 - Persona quien lo realizo
+
+## Dependencias
+Vite
+Tailwind CSS
