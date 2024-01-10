@@ -1,13 +1,25 @@
+import { useState } from "react"
+
 export const EquipoFormulario = () => {
+  const [ form , setForm ] = useState({
+    nombre:''
+  })
+
+  const handlerChange = (e) => {
+    setForm({nombre:e.target.value})
+  }
+  const handlerbSumit = (e) => {
+    e.preventDefault();
+  }
   return (
     <>
       <div className="w-full h-full p-3 flex flex-col items-center md:items-start md:my-3 md:w-screen">
         <h1 className="text-2xl text-justify">Registro de Equipo</h1>
-        <form action="" className="flex flex-col items-center w-full md:w-screen md:items-start">
+        <form onSubmit={handlerbSumit} className="flex flex-col items-center w-full md:w-screen md:items-start">
           <div className="w-full md:flex md:gap-6">
             <div className="w-full md:w-1/3">
               <label>Cliente</label>
-              <input type="text" required />
+              <input onChange={handlerChange} type="text" required />
             </div>
             <div>
               <label>Tipo de Equipo</label>
